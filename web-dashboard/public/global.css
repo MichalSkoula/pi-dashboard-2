@@ -1,0 +1,10 @@
+.bi-house {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+.bi-github, .bi-person {
+    width: 24px;
+    height: 24px;
+    margin-right: 3px;
+}
