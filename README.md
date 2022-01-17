@@ -4,11 +4,15 @@ Scraps temperatures from Teco PLC temperature control (custom non standard build
 ## nodejs-scrapper
 Scraps data from Teco PLC webpage.
 
+* npm install
+* config-example.js -> config.js
+
 ## nodemcu-sensor
 In garage, I dont have heating nor sensor. So I used NodeMCU and some temperature module. TODO
 
 ## web-dashboard 
 Svelte application to show it - frontend. TODO
+
 * npm install
 * npm run dev
 

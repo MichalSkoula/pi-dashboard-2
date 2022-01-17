@@ -2,12 +2,14 @@ const puppeteer = require('puppeteer-core');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
+var config = require('./config');
+
 (async () => {
     const browser = await puppeteer.launch({ 
-        headless: true, // default is true
-        slowMo: 0, // 250ms slow down
+        headless: config.headless, // default is true
+        slowMo: config.slowMo, // 250ms slow down
 		args: ["--no-sandbox"],
-		executablePath: "chromium"
+		executablePath: config.browserUrl
     }); 
 
     const page = await browser.newPage();
@@ -16,8 +18,8 @@ const fs = require('fs');
     await page.goto('http://192.168.8.11', { waitUntil: 'networkidle0' });
 
     // lognu se
-    await page.type('#USER', '*****');
-    await page.type('#PASS', '*****');
+    await page.type('#USER', config.user);
+    await page.type('#PASS', config.pass);
     await page.click('.theSubmit');
 
     // počkám až se načte tabulka
@@ -33,16 +35,29 @@ const fs = require('fs');
 
     let result = {
         vchod: $('#INPUT13').val(),
+        vchod_topi: $('#INPUT15').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
+        
         obyvak: $('#INPUT17').val(),
+        obyvak_topi: $('#INPUT19').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
+        
         loznice: $('#INPUT21').val(),
+        loznice_topi: $('#INPUT23').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
+        
         pokoj_predni: $('#INPUT1').val(),
+        pokoj_predni_topi: $('#INPUT3').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
+        
         koupelna: $('#INPUT4').val(),
+        koupelna_topi: $('#INPUT6').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
+        
         pokoj_zadni: $('#INPUT7').val(),
+        pokoj_zadni_topi: $('#INPUT9').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
+
+        venku: $('#INPUT26').val(),
+
+        rezim: $('#INPUT29').css('background-image') == 'url(IMAGES/08B.PNG)' ? 1 : 0
     };
 
     fs.writeFileSync('teco_result.json', JSON.stringify(result));
-
-    // console.log(result);
 
     await browser.close();
 })();

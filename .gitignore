@@ -2,3 +2,4 @@ web-dashboard/node_modules/
 web-dashboard/public/build/
 web-dashboard/public/vendor/
 .DS_Store
+nodejs-scrapper/config.js
