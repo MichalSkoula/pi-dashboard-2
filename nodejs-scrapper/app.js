@@ -55,7 +55,9 @@ var config = require('./config');
 
             venku: $('#INPUT26').val(),
 
-            rezim: $('#INPUT29').css('background-image') == 'url(IMAGES/08B.PNG)' ? 1 : 0
+            rezim: $('#INPUT29').css('background-image') == 'url(IMAGES/08B.PNG)' ? 1 : 0,
+
+            time: new Date().toLocaleString()
         };
 
         fs.writeFileSync('teco_result.json', JSON.stringify(result));
