@@ -16,7 +16,7 @@ var config = require('./config');
         const page = await browser.newPage();
 
         // jdu na stránku
-        await page.goto('http://192.168.8.11', { waitUntil: 'networkidle0' });
+        await page.goto(config.tecoUrl, { waitUntil: 'networkidle0' });
 
         // lognu se
         await page.type('#USER', config.user);
