@@ -12,52 +12,56 @@ var config = require('./config');
 		executablePath: config.browserUrl
     }); 
 
-    const page = await browser.newPage();
+    try {
+        const page = await browser.newPage();
 
-    // jdu na stránku
-    await page.goto('http://192.168.8.11', { waitUntil: 'networkidle0' });
+        // jdu na stránku
+        await page.goto('http://192.168.8.11', { waitUntil: 'networkidle0' });
 
-    // lognu se
-    await page.type('#USER', config.user);
-    await page.type('#PASS', config.pass);
-    await page.click('.theSubmit');
+        // lognu se
+        await page.type('#USER', config.user);
+        await page.type('#PASS', config.pass);
+        await page.click('.theSubmit');
 
-    // počkám až se načte tabulka
-    await page.waitForSelector('#INPUT13', {
-        visible: true,
-    });
+        // počkám až se načte tabulka
+        await page.waitForSelector('#INPUT13', {
+            visible: true,
+        });
 
-    // shrábnu html
-    const data = await page.content();
-    
-    // naparsuju do cheerio
-    const $ = cheerio.load(data);
-
-    let result = {
-        vchod: $('#INPUT13').val(),
-        vchod_topi: $('#INPUT15').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
+        // shrábnu html
+        const data = await page.content();
         
-        obyvak: $('#INPUT17').val(),
-        obyvak_topi: $('#INPUT19').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
-        
-        loznice: $('#INPUT21').val(),
-        loznice_topi: $('#INPUT23').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
-        
-        pokoj_predni: $('#INPUT1').val(),
-        pokoj_predni_topi: $('#INPUT3').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
-        
-        koupelna: $('#INPUT4').val(),
-        koupelna_topi: $('#INPUT6').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
-        
-        pokoj_zadni: $('#INPUT7').val(),
-        pokoj_zadni_topi: $('#INPUT9').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
+        // naparsuju do cheerio
+        const $ = cheerio.load(data);
 
-        venku: $('#INPUT26').val(),
+        let result = {
+            vchod: $('#INPUT13').val(),
+            vchod_topi: $('#INPUT15').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
+            
+            obyvak: $('#INPUT17').val(),
+            obyvak_topi: $('#INPUT19').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
+            
+            loznice: $('#INPUT21').val(),
+            loznice_topi: $('#INPUT23').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
+            
+            pokoj_predni: $('#INPUT1').val(),
+            pokoj_predni_topi: $('#INPUT3').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
+            
+            koupelna: $('#INPUT4').val(),
+            koupelna_topi: $('#INPUT6').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
+            
+            pokoj_zadni: $('#INPUT7').val(),
+            pokoj_zadni_topi: $('#INPUT9').css('background-image') == 'url(IMAGES/LED_GR_1.PNG)' ? 0 : 1,
 
-        rezim: $('#INPUT29').css('background-image') == 'url(IMAGES/08B.PNG)' ? 1 : 0
-    };
+            venku: $('#INPUT26').val(),
 
-    fs.writeFileSync('teco_result.json', JSON.stringify(result));
+            rezim: $('#INPUT29').css('background-image') == 'url(IMAGES/08B.PNG)' ? 1 : 0
+        };
 
-    await browser.close();
+        fs.writeFileSync('teco_result.json', JSON.stringify(result));
+    } catch (e) {
+        console.log(e);
+    } finally {
+        await browser.close();
+    }
 })();
