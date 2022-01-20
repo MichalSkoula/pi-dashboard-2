@@ -1,0 +1,26 @@
+<svg width="1852" height="1515" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <rect transform="rotate(90, 869.015, 719.446)" fill="#AF84A3" stroke="#000" stroke-width="0" x="654.52072" y="500.44672" width="428.98923" height="437.99887" id="technicka"/>
+  <rect transform="rotate(90, 331.016, 321.952)" fill="#FF00FF" stroke="#000" x="19.01549" y="2.95212" width="624" height="638" stroke-width="10" id="garaz"/>
+  <text fill="#000000" stroke="#000" stroke-width="0" x="217.41049" y="343.5599" font-size="100" font-family="'Arial'" text-anchor="start" id="garaz_text">21,5</text>
+  <rect transform="rotate(90, 857.516, 288.952)" fill="#FF00FF" stroke="#000" stroke-width="10" x="642.51549" y="81.45212" width="430" height="415" id="pokoj_predni"/>
+  <text fill="#008800" stroke="#000" stroke-width="0" x="758.41035" y="320.56018" font-size="100" font-family="'Arial'" text-anchor="start" id="pokoj_predni_text">19,5</text>
+  <rect transform="rotate(90, 1245.53, 220.952)" fill="#123456" stroke="#000" stroke-width="10" x="1098.52611" y="40.44155" width="293.99999" height="361.0212" id="zachod"/>
+  <text fill="#000000" stroke="#000" stroke-width="0" x="1145.41017" y="253.55964" font-size="100" font-family="'Arial'" text-anchor="start" id="zachod_text">22,5</text>
+  <rect transform="rotate(90, 1632.52, 288.952)" fill="#FFF5FF" stroke="#000" stroke-width="10" x="1417.51549" y="81.45215" width="430" height="415" id="pokoj_zadni"/>
+  <text fill="#000000" stroke="#000" stroke-width="0" x="1537.40972" y="321" font-size="100" font-family="'Arial'" text-anchor="start" id="pokoj_zadni_text">24,5</text>
+  <rect transform="rotate(90, 1415.02, 718.952)" fill="#FABA6F" stroke="#000" stroke-width="10" x="1200.01549" y="488.95214" width="430" height="460.00002" id="loznice"/>
+  <text fill="#000000" stroke="#000" stroke-width="0" x="1310.40995" y="753.56007" font-size="100" font-family="'Arial'" text-anchor="start" id="loznice_text">25,5</text>
+  <rect transform="rotate(90, 1147.52, 1218.95)" fill="#552233" stroke="#000" stroke-width="10" x="862.51549" y="721.45212" width="570" height="995" id="obyvak"/>
+  <text fill="#000000" stroke="#000" stroke-width="0" x="1035.3538" y="1260.66801" font-size="100" font-family="'Arial'" text-anchor="start" id="obyvak_text">26,5</text>
+  <rect transform="rotate(90, 1244.98, 435.451)" fill="#AF84A3" stroke="#000" stroke-width="0" x="1181.48184" y="260.45078" width="127" height="350" id="chodba1"/>
+  <rect transform="rotate(90, 1124.98, 706.951)" fill="#AF84A3" stroke="#000" stroke-width="0" x="902.98184" y="651.95078" width="444" height="110" id="chodba2"/>
+  <line opacity="0.25" stroke-width="10" id="svg_1" y2="367.4882" x2="1174.89781" y1="76.4594" x1="1174.89781" stroke="#000" fill="none"/>
+  <text fill="#000000" stroke="#000" stroke-width="0" x="837.74001" y="735.1975" font-size="100" font-family="'Arial'" text-anchor="start" id="technicka_text">27,5</text>
+  <line id="svg_3" y2="951.80652" x2="649.92334" y1="488.43937" x1="649.92334" stroke-width="10" stroke="#000" fill="none"/>
+  <line opacity="0.25" stroke-width="10" id="svg_4" y2="937.36148" x2="1065" y1="491.43923" x1="1065" stroke="#000" fill="none"/>
+  <line opacity="0.25" id="svg_5" y2="691.79221" x2="1069.27721" y1="691.79221" x1="649.28861" stroke-width="10" stroke="#000" fill="none"/>
+ </g>
+</svg>

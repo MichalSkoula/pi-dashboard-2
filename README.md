@@ -18,13 +18,9 @@ For running via cron & uploading to webserver:
 * python cron.py
 
 ## nodemcu-sensor
-In garage, I dont have heating nor sensor. So I used NodeMCU and some temperature module. TODO
+TODO In garage, I dont have heating nor sensor. So I used NodeMCU and some temperature module.
 
 ## web-dashboard 
-Svelte application to show it - frontend. TODO
+Vue3 application to show it on floor plan - frontend.
 
 * npm install
-* npm run dev
-
-
-
