@@ -60,9 +60,11 @@ var config = require('./config');
             time: new Date().toLocaleString()
         };
 
-        fs.writeFileSync('teco_result.json', JSON.stringify(result));
+        fs.writeFileSync('teco_result.json', JSON.stringify(result));    
+
+        console.log(new Date().toLocaleString() + " ok");
     } catch (e) {
-        console.log(e);
+        console.log(new Date().toLocaleString() + " error " + e);
     } finally {
         await browser.close();
     }

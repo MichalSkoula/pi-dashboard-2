@@ -4,8 +4,18 @@ Scraps temperatures from Teco PLC temperature control (custom non standard build
 ## nodejs-scrapper
 Scraps data from Teco PLC webpage.
 
+For just scrapping:
+
 * npm install
-* config-example.js -> config.js
+* app-config-example.js -> app-config.js
+* node app.js 
+
+For running via cron & uploading to webserver:
+
+* sudo apt install libffi-dev
+* pip install paramiko scp
+* cron_config_example.py -> cron_config.py
+* python cron.py
 
 ## nodemcu-sensor
 In garage, I dont have heating nor sensor. So I used NodeMCU and some temperature module. TODO

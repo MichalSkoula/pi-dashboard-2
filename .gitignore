@@ -2,5 +2,6 @@ node_modules/
 web-dashboard/public/build/
 web-dashboard/public/vendor/
 .DS_Store
-nodejs-scrapper/config.js
+nodejs-scrapper/app-config.js
 nodejs-scrapper/teco_result.json
+nodejs-scrapper/cron_config.py
