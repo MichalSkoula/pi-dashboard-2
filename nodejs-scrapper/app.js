@@ -57,14 +57,14 @@ var config = require('./config');
 
             rezim: $('#INPUT29').css('background-image') == 'url(IMAGES/08B.PNG)' ? 1 : 0,
 
-            time: new Date().toLocaleString()
+            time: new Date().toLocaleString('cs-CZ')
         };
 
         fs.writeFileSync('teco_result.json', JSON.stringify(result));    
 
-        console.log(new Date().toLocaleString() + " ok");
+        console.log(new Date().toLocaleString('cs-CZ') + " ok");
     } catch (e) {
-        console.log(new Date().toLocaleString() + " error " + e);
+        console.log(new Date().toLocaleString('cs-CZ') + " error " + e);
     } finally {
         await browser.close();
     }
