@@ -21,6 +21,6 @@ For running via cron & uploading to webserver:
 TODO In garage, I dont have heating nor sensor. So I used NodeMCU and some temperature module.
 
 ## web-dashboard 
-Vue3 application to show it on floor plan - frontend.
+Vue3 application to show it on floor plan - frontend. Fetches teco_result.json periodically.
 
 * npm install

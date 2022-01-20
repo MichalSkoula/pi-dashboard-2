@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width,initial-scale=1'>
 
     <title>lasenapi.skoula.cz</title>
 
-    <link rel='stylesheet' href='global.css'>
+    <link rel='stylesheet' href='index.css'>
     <script src='node_modules/vue/dist/vue.global.js'></script>
-    
 </head>
 
 <body>
- 
     <div id="app">
-        <svg viewBox="0 0 1852 1515" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="-20 -20 1892 1555" xmlns="http://www.w3.org/2000/svg">
             <g>
                 <rect transform="rotate(90, 869.015, 719.446)" fill="#FFF" stroke="#000" stroke-width="0" x="654.52072" y="500.44672" width="428.98923" height="437.99887" id="technicka"/>
                 <rect transform="rotate(90, 331.016, 321.952)" fill="#FFF" stroke="#000" x="19.01549" y="2.95212" width="624" height="638" stroke-width="10" id="garaz"/>
                 <rect transform="rotate(90, 857.516, 288.952)" fill="#FFF" stroke="#000" stroke-width="10" x="642.51549" y="81.45212" width="430" height="415" id="pokoj_predni"/>
                 <rect transform="rotate(90, 1245.53, 220.952)" fill="#FFF" stroke="#000" stroke-width="10" x="1098.52611" y="40.44155" width="293.99999" height="361.0212" id="zachod"/>
-                <rect transform="rotate(90, 1632.52, 288.952)" fill="#FFF" stroke="#000" stroke-width="10" x="1417.51549" y="81.45215" width="430" height="415" id="pokoj_zadni"/>
+                <rect transform="rotate(90, 1632.52, 288.952)" fill="#FFF" stroke="#000" stroke-width="10" x="1417.51549" y="81.45212" width="430" height="415" id="pokoj_zadni"/>
                 <rect transform="rotate(90, 1415.02, 718.952)" fill="#FFF" stroke="#000" stroke-width="10" x="1200.01549" y="488.95214" width="430" height="460.00002" id="loznice"/>
                 <rect transform="rotate(90, 1147.52, 1218.95)" fill="#FFF" stroke="#000" stroke-width="10" x="862.51549" y="721.45212" width="570" height="995" id="obyvak"/>
                 <rect transform="rotate(90, 1244.98, 435.451)" fill="#FFF" stroke="#000" stroke-width="0" x="1181.48184" y="260.45078" width="127" height="350" id="chodba1"/>
@@ -31,13 +29,16 @@
                 <line opacity="0.25" stroke-width="10" id="svg_4" y2="937.36148" x2="1065" y1="491.43923" x1="1065" stroke="#000" fill="none"/>
                 <line opacity="0.25" id="svg_5" y2="691.79221" x2="1069.27721" y1="691.79221" x1="649.28861" stroke-width="10" stroke="#000" fill="none"/>
 
-                <text fill="#000000" stroke="#000" stroke-width="0" x="217.41049" y="343.5599" font-size="100" font-family="'Arial'" text-anchor="start" id="garaz_text">{{ tempData.garaz }}</text>
-                <text fill="#008800" stroke="#000" stroke-width="0" x="758.41035" y="320.56018" font-size="100" font-family="'Arial'" text-anchor="start" id="pokoj_predni_text">{{ tempData.pokoj_predni }}</text>
-                <text fill="#000000" stroke="#000" stroke-width="0" x="1145.41017" y="253.55964" font-size="100" font-family="'Arial'" text-anchor="start" id="zachod_text">{{ tempData.koupelna }}</text>
-                <text fill="#000000" stroke="#000" stroke-width="0" x="1537.40972" y="321" font-size="100" font-family="'Arial'" text-anchor="start" id="pokoj_zadni_text">{{ tempData.pokoj_zadni }}</text>
-                <text fill="#000000" stroke="#000" stroke-width="0" x="1310.40995" y="753.56007" font-size="100" font-family="'Arial'" text-anchor="start" id="loznice_text">{{ tempData.loznice }}</text>
-                <text fill="#000000" stroke="#000" stroke-width="0" x="1035.3538" y="1260.66801" font-size="100" font-family="'Arial'" text-anchor="start" id="obyvak_text">{{ tempData.obyvak }}</text>
-                <text fill="#000000" stroke="#000" stroke-width="0" x="837.74001" y="735.1975" font-size="100" font-family="'Arial'" text-anchor="start" id="technicka_text">{{ tempData.vchod  }}</text>
+                <text fill="#000" stroke="#000" stroke-width="0" x="217" y="343" font-size="100" font-family="'Arial'" text-anchor="start" id="garaz_text">{{ tempData.garaz }}</text>
+                <text fill="#000" stroke="#000" stroke-width="0" x="758" y="320" font-size="100" font-family="'Arial'" text-anchor="start" id="pokoj_predni_text">{{ tempData.pokoj_predni + (tempData.pokoj_predni_topi ? '🌡️' : '') }}</text>
+                <text fill="#000" stroke="#000" stroke-width="0" x="1145" y="253" font-size="100" font-family="'Arial'" text-anchor="start" id="zachod_text">{{ tempData.koupelna + (tempData.koupelna_topi ? '🌡️' : '') }}</text>
+                <text fill="#000" stroke="#000" stroke-width="0" x="1537" y="320" font-size="100" font-family="'Arial'" text-anchor="start" id="pokoj_zadni_text">{{ tempData.pokoj_zadni + (tempData.pokoj_zadni_topi ? '🌡️' : '') }}</text>
+                <text fill="#000" stroke="#000" stroke-width="0" x="1310" y="753" font-size="100" font-family="'Arial'" text-anchor="start" id="loznice_text">{{ tempData.loznice + (tempData.loznice_topi ? '🌡️' : '') }}</text>
+                <text fill="#000" stroke="#000" stroke-width="0" x="1035" y="1260" font-size="100" font-family="'Arial'" text-anchor="start" id="obyvak_text">{{ tempData.obyvak + (tempData.obyvak_topi ? '🌡️' : '') }}</text>
+                <text fill="#000" stroke="#000" stroke-width="0" x="837" y="753" font-size="100" font-family="'Arial'" text-anchor="start" id="technicka_text">{{ tempData.vchod + (tempData.vchod_topi ? '🌡️' : '')  }}</text>
+                <text fill="#000" stroke="#000" stroke-width="0" x="197" y="1100" font-size="100" font-family="'Arial'" text-anchor="start" id="venku_text">{{ tempData.venku + (tempData.pokoj_predni_topi ? '🌡️' : '') }}</text>
+                <text fill="#000" stroke="#000" stroke-width="0" x="50" y="1350" font-size="40" font-family="'Arial'" text-anchor="start" id="time_text">{{ tempData.time }}</text>
+                <text fill="#000" stroke="#000" stroke-width="0" x="50" y="1410" font-size="40" font-family="'Arial'" text-anchor="start" id="time_text">{{ tempData.rezim ? "zimní režim" : "letní režim" }}</text>
             </g>
         </svg>
     </div>
