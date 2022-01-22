@@ -18,7 +18,13 @@ For running via cron & uploading to webserver:
 * python cron.py
 
 ## nodemcu-sensor
-TODO In garage, I dont have heating nor sensor. So I used NodeMCU and some temperature module.
+In garage, I dont have heating nor sensor. So I used NodeMCU (ESP8266) and LM75 temperature module.
+
+* https://github.com/jlz3008/lm75 (download zip and import to Arduino IDE)
+* sketch.ino -> NodeMCU
+
+![Fritzing](nodemcu.png)
+
 
 ## web-dashboard 
 Vue3 application to show it on floor plan - frontend. Fetches teco_result.json periodically.
