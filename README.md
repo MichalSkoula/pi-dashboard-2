@@ -23,7 +23,7 @@ In garage, I dont have heating nor sensor. So I used NodeMCU (ESP8266) and LM75 
 * https://github.com/jlz3008/lm75 (download zip and import to Arduino IDE)
 * sketch.ino -> NodeMCU
 
-![Fritzing](nodemcu.png)
+![Fritzing](https://github.com/MichalSkoula/pi-dashboard-2/blob/master/nodemcu-sensor/nodemcu.png)
 
 
 ## web-dashboard 
