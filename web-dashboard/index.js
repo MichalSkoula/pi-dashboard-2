@@ -37,7 +37,7 @@ const App = {
                     document.getElementById('pokoj_zadni').setAttribute('fill', this.colorRoom(this.tempData.pokoj_zadni));
                     document.getElementById('zachod').setAttribute('fill', this.colorRoom(this.tempData.koupelna));
                     document.getElementById('loznice').setAttribute('fill', this.colorRoom(this.tempData.loznice));
-                    document.getElementById('loznice').setAttribute('fill', this.colorRoom(this.tempData.loznice));
+                    document.getElementById('garaz').setAttribute('fill', this.colorRoom(this.tempData.garaz));
                 });
         },
         colorRoom(t) {

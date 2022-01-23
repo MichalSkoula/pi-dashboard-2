@@ -1,8 +1,9 @@
 const puppeteer = require('puppeteer-core');
 const cheerio = require('cheerio');
 const fs = require('fs');
+const fetch = require("node-fetch");
 
-var config = require('./config');
+var config = require('./app-config');
 
 (async () => {
     const browser = await puppeteer.launch({ 
@@ -59,6 +60,13 @@ var config = require('./config');
 
             time: new Date().toLocaleString('cs-CZ')
         };
+
+        // eště by to chtělo data z garáže - zeptáme se NodeMCU
+        await fetch(config.nodeMcuUrl) 
+                .then(response => response.json())
+                .then(data => { 
+                    result.garaz = data.temp;
+                });
 
         fs.writeFileSync('teco_result.json', JSON.stringify(result));    
 

@@ -10,6 +10,9 @@ from scp import SCPClient
 import paramiko
 from subprocess import check_output
 
+# kill previous hanging process 
+os.system("pkill node")
+
 # run node script
 p = check_output(['node', 'app.js'])
 print (p)
