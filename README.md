@@ -2,7 +2,7 @@
 Scraps temperatures from Teco PLC temperature control (custom non standard build) using Node.js and headless Chromium. Runs on Raspberry Pi server. Also fetches data from NodeMCU. Showing data on Svelte dashboard.
 
 ## nodejs-scrapper
-Scraps data from Teco PLC webpage.
+Scraps data from Teco PLC webpage using javascript.
 
 For just scrapping:
 
@@ -18,15 +18,18 @@ For running via cron & uploading to webserver:
 * python cron.py
 
 ## nodemcu-sensor
-In garage, I dont have heating nor sensor. So I used NodeMCU (ESP8266) and LM75 temperature module.
+In my garage, I dont have heating nor thermometer. So I used NodeMCU (ESP8266) and LM75 temperature module. It acts like a web server, returning json with temperate. It's like a REST wireless thermometer (lol).
 
 * https://github.com/jlz3008/lm75 (download zip and import to Arduino IDE)
-* sketch.ino -> NodeMCU
+* sketch.ino -> NodeMCU (update Wifi creds)
 
 ![Fritzing](https://github.com/MichalSkoula/pi-dashboard-2/blob/master/nodemcu-sensor/nodemcu.png)
 
+![NodeMcu wireless thermometer](https://github.com/MichalSkoula/pi-dashboard-2/blob/master/nodemcu-sensor/sensor.jpg)
 
 ## web-dashboard 
 Vue3 application to show it on floor plan - frontend. Fetches teco_result.json periodically.
 
 * npm install
+
+![Heating dashboard](https://github.com/MichalSkoula/pi-dashboard-2/blob/master/web-dashboard/screenshot.png)
