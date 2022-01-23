@@ -65,7 +65,7 @@ var config = require('./app-config');
         await fetch(config.nodeMcuUrl) 
                 .then(response => response.json())
                 .then(data => { 
-                    result.garaz = data.temp;
+                    result.garaz = data.temp.toFixed(1);
                 });
 
         fs.writeFileSync('teco_result.json', JSON.stringify(result));    
