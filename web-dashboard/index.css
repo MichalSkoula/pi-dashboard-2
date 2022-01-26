@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0px;
     overflow: hidden;
+    background-color: #515151;
 }
 
 svg {
